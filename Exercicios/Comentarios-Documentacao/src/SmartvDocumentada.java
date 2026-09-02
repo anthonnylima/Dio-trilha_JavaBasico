@@ -1,69 +1,81 @@
-import java.util.Scanner;
-    /** <h1>Smart tv</h1>
-     * essa classe simula um sistema de funcionamento de uma Smartv bem simples,
-     * com funcionalidades como ligar, desligar, mudar o canal e mudar o volume.
-     * @author : Anthonny de Lima Lucena
-     * @version :1.0
-     * @since : 10/09/2026
-     */
+/**
+ * Smart TV
+ *
+ * <p>Essa classe simula um sistema de funcionamento de uma Smart TV
+ * bem simples, com funcionalidades como ligar, desligar, mudar o canal
+ * e mudar o volume.</p>
+ *
+ * @author Anthonny de Lima Lucena
+ * @version 1.0
+ * @since 10/09/2026
+ */
 public class SmartvDocumentada {
+
     boolean ligada = false;
     int canal = 0;
     int volume = 99;
 
-        /** <h1>Metodo ligar</h1>
-         * consiste em mudar a varivel boolean ligada para true, indicando que a tv esta ligada
-         */
+    /**
+     * Liga a Smart TV, alterando o valor da variável {@code ligada}
+     * para {@code true}.
+     */
     public void ligar() {
-         ligada=true;
+        ligada = true;
     }
-        /** <h1>Metodo Desligar</h1>
-         * consiste em mudar a varivel boolean ligada para false, indicando que a tv esta desligada
-         */
+
+    /**
+     * Desliga a Smart TV, alterando o valor da variável {@code ligada}
+     * para {@code false}.
+     */
     public void desligar() {
-        ligada=false;
+        ligada = false;
     }
-        /** <h1>Metodo mudar canal(proximo canal)</h1>
-         * ele adciona mais um ao valor de canal, que referencia ao numeroção do proximo canal
-         */
+
+    /**
+     * Avança para o próximo canal, adicionando 1 ao valor atual
+     * da variável {@code canal}.
+     */
     public void mudarParaPrximoCanal() {
         ++canal;
         System.out.println("Canal atual: " + canal);
     }
 
-        /** <h1>Metodo mudar canal(direto)</h1>
-         * ele muda o valor do canal, que é passado pelo usuario com parametro da função
-         * @param canalescolhido representa o canal escolhido pelo usuario.
-         */
-    public void mudarCanalDireto(int canalescolhido) {
-        canal = canalescolhido;
-        System.out.println("Canal atual: "+ canal);
+    /**
+     * Muda diretamente para o canal escolhido pelo usuário.
+     *
+     * @param canalEscolhido representa o canal escolhido pelo usuário.
+     */
+    public void mudarCanalDireto(int canalEscolhido) {
+        canal = canalEscolhido;
+        System.out.println("Canal atual: " + canal);
     }
 
-    /** <h1>Metodo aumentar volume</h1>
-     * aumenta mais 1 de de som por vez, ate que chegue em 100 que é o valor maximo
+    /**
+     * Aumenta o volume em 1 unidade por vez, até chegar ao valor máximo
+     * de 100.
      */
-    public void aumentarVolume(){
+    public void aumentarVolume() {
         if (volume >= 100) {
-            System.out.println("O volume ja está no maximo");
-            System.out.println("Volume atual: "+ volume);
-        }
-        else {
+            System.out.println("O volume já está no máximo");
+            System.out.println("Volume atual: " + volume);
+        } else {
             ++volume;
             System.out.println("Volume atual: " + volume);
         }
     }
 
-    /** <h1>Metodo diminuir volume</h1>
-                * deminui 1 de de som por vez, ate que chegue em 0 que é o valor minimo
+    /**
+     * Diminui o volume em 1 unidade por vez, até chegar ao valor mínimo
+     * de 0.
      */
     public void diminuirVolume() {
         if (volume <= 0) {
-            System.out.println("O volume ja está no minimo");
-            System.out.println("Volume atual: "+ volume);
-        }else {
+            System.out.println("O volume já está no mínimo");
+            System.out.println("Volume atual: " + volume);
+        } else {
             --volume;
             System.out.println("Volume atual: " + volume);
         }
     }
 }
+```
