@@ -21,8 +21,8 @@ interface AparelhoTelefonico{
 
 interface NavegacaoInternet{
     exibirPagina(String url) : boolean
-    adicionarNovaAba() : String
-    atualizarPagina() : String
+    adicionarNovaAba() : void
+    atualizarPagina() : void
 }
 
 Iphone--|>AparelhoTelefonico
